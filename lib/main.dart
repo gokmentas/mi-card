@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const CircleAvatar(
                 backgroundImage: AssetImage('images/hakki.jpeg'),
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Text(
-                'PROVA+ STAJYERİ',
+                'MAKİNE MÜHENDİSİ',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -36,51 +37,51 @@ class MyApp extends StatelessWidget {
                   color: Colors.teal.shade100,
                 ),
               ),
-              Container(
-                margin:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: const EdgeInsets.all(10),
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.phone,
-                      color: Colors.teal,
-                    ),
-                    const SizedBox(width: 10),
-                    Text(
-                      '+90 123 456 78 90',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'SourceSans3',
-                        fontSize: 20,
-                      ),
-                    ),
-                  ],
+              SizedBox(
+                height: 10,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade100,
                 ),
               ),
-              Container(
+              Card(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+                color: Colors.white,
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+90 123 456 78 90',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSans3',
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+              Card(
                 color: Colors.white,
                 margin:
                     const EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: const EdgeInsets.all(10),
-                child: Row(
-                  children: [
-                    const Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'hakki@email.com',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSans3',
+                      fontSize: 20,
                     ),
-                    const SizedBox(width: 10),
-                    Text(
-                      'hakki@email.com',
-                      style: TextStyle(
-                          color: Colors.teal.shade900,
-                          fontFamily: 'SourceSans3',
-                          fontSize: 20),
-                    ),
-                  ],
+                  ),
                 ),
-              )
+              ),
             ],
           ),
         ),
